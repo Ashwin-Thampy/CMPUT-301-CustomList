@@ -60,6 +60,10 @@ public class CustomList extends ArrayAdapter<City> {
 
     public Boolean hasCity(City city){
         return cities.contains(city);
-        //return true;
+    }
+
+    public Boolean deleteCity(City city){
+        //return cities.remove(city);
+        return null;
     }
 }
