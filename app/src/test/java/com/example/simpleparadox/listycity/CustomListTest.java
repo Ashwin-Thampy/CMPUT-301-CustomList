@@ -34,8 +34,8 @@ public class CustomListTest {
     public void deleteCityTest() {
         City mockcity = new City("Edmonton", "Alberta");
         list.addCity(mockcity);
+        int listSize = list.getCount();
         if (list.hasCity(mockcity)) {
-            int listSize = list.getCount();
            list.deleteCity(mockcity);
            assertEquals(listSize-1, list.getCount());
         }
@@ -43,4 +43,13 @@ public class CustomListTest {
           throw new IllegalArgumentException();
         }
     }
+
+    @Test
+    public void countCityTest() {
+        City mockcity = new City("Edmonton", "Alberta");
+        list.addCity(mockcity);
+        int size = list.countCity();
+        assertEquals(size, list.getCount());
+    }
 }
+

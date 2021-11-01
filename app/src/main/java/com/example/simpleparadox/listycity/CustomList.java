@@ -65,4 +65,9 @@ public class CustomList extends ArrayAdapter<City> {
     public Boolean deleteCity(City city){
         return cities.remove(city);
     }
+    
+    public Integer countCity() {
+        //return cities.size();
+        return null;
+    }
 }
